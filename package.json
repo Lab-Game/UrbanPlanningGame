@@ -1,0 +1,13 @@
+{
+  "name": "urban-planning-game",
+  "version": "1.0.0",
+  "description": "Grow your village to a town to a city to a thriving megalopolis!",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": ["game", "urban-planning", "city-builder", "simulation"],
+  "author": "Lab-Game",
+  "license": "MIT"
+}

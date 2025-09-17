@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Planning Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <header id="ui-header">
+            <h1>Urban Planning Game</h1>
+            <div id="stats">
+                <span id="population">Population: 10</span>
+                <span id="budget">Budget: $10,000</span>
+                <span id="tax-rate">Tax Rate: 5%</span>
+            </div>
+        </header>
+        
+        <div id="game-main">
+            <div id="toolbar">
+                <h3>Build Infrastructure</h3>
+                <div id="build-tools">
+                    <button class="tool-btn active" data-tool="select">Select</button>
+                    <button class="tool-btn" data-tool="road">Road ($100)</button>
+                    <button class="tool-btn" data-tool="bridge">Bridge ($500)</button>
+                    <button class="tool-btn" data-tool="park">Park ($200)</button>
+                    <button class="tool-btn" data-tool="railroad">Railroad ($300)</button>
+                    <button class="tool-btn" data-tool="dock">Dock ($400)</button>
+                </div>
+                <div id="tax-controls">
+                    <h4>Tax Rate</h4>
+                    <input type="range" id="tax-slider" min="1" max="20" value="5">
+                    <span id="tax-display">5%</span>
+                </div>
+            </div>
+            
+            <div id="game-area">
+                <canvas id="game-canvas" width="800" height="600"></canvas>
+            </div>
+        </div>
+        
+        <div id="info-panel">
+            <h3>Game Info</h3>
+            <div id="selected-tile-info">
+                <p>Click on a tile to see information</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/terrain.js"></script>
+    <script src="js/infrastructure.js"></script>
+    <script src="js/population.js"></script>
+    <script src="js/economy.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
